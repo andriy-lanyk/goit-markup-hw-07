@@ -57,10 +57,6 @@ p {
   margin-bottom: 0;
 }
 
-header {
-  background-color: var(--text-hero-color);
-}
-
 .list {
   padding: 0;
   margin: 0;
@@ -347,7 +343,12 @@ section {
 }
 
 /* header */
-.container.header {
+
+.header {
+  background-color: var(--text-hero-color);
+}
+
+.container.header__container {
   display: flex;
   align-items: center;
 }
@@ -379,21 +380,21 @@ section {
 }
 
 .site-navigation,
-.contacts-main {
+.contacts {
   display: flex;
 }
 
 .site-navigation__item:not(:last-child),
-.contacts-main__item:not(:last-child) {
+.contacts__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.contacts-main {
+.contacts {
   margin-left: auto;
 }
 
 .site-navigation__link,
-.contacts-main__link {
+.contacts__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -426,7 +427,7 @@ section {
   color: var(--activ-button-color);
 }
 
-.contacts-main__link {
+.contacts__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -436,7 +437,7 @@ section {
   transition: color var(--duration) var(--timing-function);
 }
 
-.contacts-main__icon {
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -451,8 +452,8 @@ section {
   height: 16px;
 }*/
 
-.contacts-main__link:hover,
-.contacts-main__link:focus {
+.contacts__link:hover,
+.contacts__link:focus {
   color: var(--activ-button-color);
 }
 
@@ -680,7 +681,7 @@ section {
   text-align: center;
 }
 
-.team__sociallist {
+.team__social-list {
   display: flex;
   margin-top: 16px;
   padding-left: 32px;
@@ -688,16 +689,16 @@ section {
   justify-content: space-between;
 }
 
-.team__socialitem {
+.team__social-item {
   width: 44px;
   height: 44px;
 }
 
-.team__socialitem:not(:last-child) {
+.team__social-item:not(:last-child) {
   margin-right: 10px;
 }
 
-.team__sociallink {
+.team__social-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -711,8 +712,8 @@ section {
     background-color var(--duration) var(--timing-function);
 }
 
-.team__sociallink:hover,
-.team__sociallink:focus {
+.team__social-link:hover,
+.team__social-link:focus {
   color: var(--text-hero-color);
   background-color: var(--activ-button-color);
 }
@@ -930,7 +931,7 @@ section {
   border-color: transparent;
 }
 
-.subscribe__buttontext {
+.subscribe__button-text {
   margin-right: 10px;
   font-family: Roboto, sans-serif;
   font-weight: 700;
@@ -1011,10 +1012,6 @@ section {
   width: 370px;
   margin: 15px;
 }
-
-.example {
-  display: block;
-  }
 
 .example__link {
   display: block;
