@@ -24,10 +24,19 @@ Font nav, mail, phone, hero, button-hero, h2, h3, p, address, email+phone-footer
   --title-text-color: #212121;
   --text-hero-color: #ffffff;
   --border-example-color: #eeeeee;
+  --border-header-color: #ececec;
   --secondary-bg-color: #f5f4fa;
   --primary-fill-color: #afb1b8;
   --checked-button-color: #188CE8;
+  --modal-icon-color: #000000;
+  --primary-footer-color: #2f303a;
+  --footer-text-color:  rgba(255, 255, 255, 0.6);
   --network-bg-color: rgba(255, 255, 255, 0.1);
+  --box-shadow-primary-color: rgba(0, 0, 0, 0.12);
+  --box-shadow-secondary-color: rgba(0, 0, 0, 0.14);
+  --box-shadow-tertiary-color: rgba(0, 0, 0, 0.2);
+  --box-shadow-button-color: rgba(0, 0, 0, 0.15);
+  --box-shadow-transition-color: rgba(0, 0, 0, 0);
 
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --duration: 250ms;
@@ -92,7 +101,7 @@ section {
 
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--box-shadow-tertiary-color);
 
   opacity: 1;
 
@@ -121,7 +130,7 @@ section {
   min-height: 581px;
   background-color: var(--text-hero-color);
 
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px var(--box-shadow-primary-color), 0px 1px 1px var(--box-shadow-secondary-color), 0px 2px 1px var(--box-shadow-tertiary-color);
   border-radius: 4px;
 
   transition: transform var(--duration) var(--timing-function);
@@ -143,7 +152,7 @@ section {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--text-hero-color);
-  color: #000000;
+  color: var(--modal-icon-color);
 
   transition: color var(--duration) var(--timing-function);
 }
@@ -221,7 +230,7 @@ section {
   width: 18px;
   height: 18px;
   background-color: inherit;
-  fill: #000000;
+  fill: var(--modal-icon-color);
 
   transition: fill var(--duration) var(--timing-function);
 }
@@ -320,7 +329,7 @@ section {
   margin: 0 auto;
 
   background-color: var(--activ-button-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px var(--box-shadow-button-color);
   border-radius: 4px;
   border-color: rgba(255, 255, 255, 0);
   outline: transparent;
@@ -398,6 +407,7 @@ section {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  height: max-content;
 }
 
 .site-navigation__link {
@@ -517,7 +527,7 @@ section {
   letter-spacing: 0.06em;
 
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px var(--box-shadow-button-color);
 }
 
 /* advantages */
@@ -650,8 +660,8 @@ section {
 
   text-align: center;
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px var(--box-shadow-primary-color), 0px 1px 1px var(--box-shadow-secondary-color),
+    0px 2px 1px var(--box-shadow-tertiary-color);
 }
 
 .team__item:nth-child(4n) {
@@ -750,7 +760,7 @@ section {
   color: var(--primary-fill-color);
   border-radius: 4px;
   border: 1px solid var(--primary-fill-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0));
+  filter: drop-shadow(0px 4px 4px var(--box-shadow-transition-color));
 
   transition: color var(--duration) var(--timing-function),
   border var(--duration) var(--timing-function),
@@ -773,7 +783,7 @@ section {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: #2f303a;
+  background-color: var(--primary-footer-color);
 }
 
 .footer__container {
@@ -788,12 +798,12 @@ section {
 }
 
 .logo__text--white {
-  color: #ffffff;
+  color: var(--text-hero-color);
 }
 
 .footer__address {
   margin-bottom: 9px;
-  color: #ffffff;
+  color: var(--text-hero-color);
   font-style: inherit;
   font-size: 14px;
   line-height: 1.71;
@@ -807,7 +817,7 @@ section {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-text-color);
 }
 
 .join {
@@ -896,13 +906,13 @@ section {
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 4px var(--box-shadow-button-color));
   border-radius: 4px;
   outline: transparent;
 
   background-color: inherit;
 
-  color: black;
+  color: var(--modal-icon-color);
 }
   
 .subscribe__input::placeholder {
@@ -913,7 +923,7 @@ section {
 
   letter-spacing: 0.03em;
 
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-text-color);
 }
 
 .subscribe__button {
@@ -926,7 +936,7 @@ section {
   height: 50px;
 
   background: var(--activ-button-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px var(--box-shadow-button-color);
   border-radius: 4px;
   border-color: transparent;
 }
@@ -951,7 +961,7 @@ section {
 /* Portfolio */
 
 .header--border {
-  border: 1px solid #ececec;
+  border: 1px solid var(--border-header-color);
 }
 
 .portfolio {
@@ -977,7 +987,7 @@ section {
   min-width: 73px;
   min-height: 38px;
 
-  background-color: #f5f4fa;
+  background-color: var(--secondary-bg-color);
   color: var(--title-text-color);
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -986,8 +996,8 @@ section {
   text-align: center;
   letter-spacing: 0.03em;
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0), 0px 1px 2px rgba(0, 0, 0, 0),
-    0px 2px 2px rgba(0, 0, 0, 0);
+  box-shadow: 0px 3px 1px var(--box-shadow-transition-color), 0px 1px 2px var(--box-shadow-transition-color),
+    0px 2px 2px var(--box-shadow-transition-color);
 
   transition: background-color var(--duration) var(--timing-function),
   color var(--duration) var(--timing-function),
@@ -999,7 +1009,7 @@ section {
   background-color: var(--activ-button-color);
   color: var(--text-hero-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+    0px 2px 2px var(--box-shadow-primary-color);
 }
 
 .example__list {
@@ -1016,15 +1026,15 @@ section {
 .example__link {
   display: block;
 
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0),
-  1px 4px 6px rgba(0, 0, 0, 0);
+  box-shadow: 0px 1px 1px var(--box-shadow-transition-color), 0px 4px 4px var(--box-shadow-transition-color),
+  1px 4px 6px var(--box-shadow-transition-color);
 
   transition: box-shadow var(--duration) var(--timing-function);
 }
 
 .example__link:focus,
 .example__link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  box-shadow: 0px 1px 1px var(--box-shadow-primary-color), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
