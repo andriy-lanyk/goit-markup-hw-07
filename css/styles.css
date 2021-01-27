@@ -1,6 +1,6 @@
 /*  Color
 Web color, Color activ button, email, phone, button-hero - #2196F3 !!!
-Color passiv button, h2, h3, button-portfolio-passiv - #212121 !!!
+Color passiv button, h2, h3, project__button-passiv - #212121 !!!
 Color passiv email, phone, p - #757575 !!!
 
 background header - #FFFFFF
@@ -8,7 +8,7 @@ background hero, footer - #2F303A
 background main - #E5E5E5
 backgrpund section our team - #F5F4FA
 
-text hero, button-hero, address, button-portfolio-active - #FFFFFF
+text hero, button-hero, address, project__button-active - #FFFFFF
 email+phone-footer - rgba(255, 255, 255, 0.6);
 
 */
@@ -81,7 +81,7 @@ section {
 }
 
 .hero__button,
-.button-portfolio,
+.project__button,
 .subscribe__button,
 .modal__button,
 .modal-form__button {
@@ -949,7 +949,7 @@ section {
 
 /* Portfolio */
 
-.header-border {
+.header--border {
   border: 1px solid #ececec;
 }
 
@@ -957,17 +957,17 @@ section {
   margin-bottom: 0;
 }
 
-.project-list {
+.project__list {
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
 }
 
-.project-list .item:not(:last-child) {
+.project__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.button-portfolio {
+.project__button {
   display: inline-block;
   padding: 6px 22px;
   border-radius: 4px;
@@ -993,21 +993,21 @@ section {
   box-shadow var(--duration) var(--timing-function);
 }
 
-.button-portfolio:hover,
-.button-portfolio:focus {
+.project__button:hover,
+.project__button:focus {
   background-color: var(--activ-button-color);
   color: var(--text-hero-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.example-list {
+.example__list {
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
 }
 
-.example-list > .example {
+.example__item {
   width: 370px;
   margin: 15px;
 }
@@ -1016,7 +1016,7 @@ section {
   display: block;
   }
 
-.example-icon {
+.example__link {
   display: block;
 
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0),
@@ -1025,19 +1025,19 @@ section {
   transition: box-shadow var(--duration) var(--timing-function);
 }
 
-.example-icon:focus,
-.example-icon:hover {
+.example__link:focus,
+.example__link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.example-list img {
+.example__photo {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.example-content {
+.example__content {
   padding: 20px 24px;
   background-color: var(--text-hero-color);
   border-right: 1px solid var(--border-example-color);
@@ -1045,7 +1045,7 @@ section {
   border-left: 1px solid var(--border-example-color);
 }
 
-.example-title {
+.example__title {
   margin-top: 0;
   margin-bottom: 4px;
 
@@ -1056,18 +1056,18 @@ section {
   letter-spacing: 0.06em;
 }
 
-.example-text {
+.example__text {
   font-size: 16px;
   line-height: 1.87;
   color: var(--primary-text-color);
 }
 
-.overlay-hidden {
+.example__overlay {
   position: relative;
   overflow: hidden;
 }
 
-.overlay-example {
+.example__description {
   position: absolute;
   top: 0;
   left: 0;
@@ -1079,7 +1079,7 @@ section {
   transition: transform var(--duration) var(--timing-function);
 }
 
-.overlay-example > p {
+.example__specification {
   position: absolute;
   width: 322px;
   height: 168px;
@@ -1094,7 +1094,7 @@ section {
   color: var(--text-hero-color);
 }
 
-.example-icon:focus .overlay-example,
-.example-icon:hover .overlay-example {
+.example__link:focus .example__description,
+.example__link:hover .example__description {
   transform: translateY(0);
 }
