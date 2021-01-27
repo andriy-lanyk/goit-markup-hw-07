@@ -391,6 +391,7 @@ section {
 .site-navigation,
 .contacts {
   display: flex;
+  align-items: center;
 }
 
 .site-navigation__item:not(:last-child),
@@ -404,10 +405,10 @@ section {
 
 .site-navigation__link,
 .contacts__link {
-  display: block;
+  display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
-  height: max-content;
+  height: 80px;
 }
 
 .site-navigation__link {
@@ -427,7 +428,7 @@ section {
   display: block;
   width: 100%;
   height: 4px;
-  bottom: -2px;
+  bottom: 0;
   background-color: var(--activ-button-color);
   border-radius: 2px;
 }
