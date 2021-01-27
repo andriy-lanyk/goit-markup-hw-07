@@ -442,15 +442,15 @@ section {
   fill: currentColor;
 }
 
-/*.envelope {
+.contacts__icon--envelope {
   width: 16px;
   height: 12px;
 }
 
-.smartphone {
+.contacts__icon--phone {
   width: 10px;
   height: 16px;
-}*/
+}
 
 .contacts__link:hover,
 .contacts__link:focus {
