@@ -718,7 +718,7 @@ section {
   background-color: var(--activ-button-color);
 }
 
-.team__socialicon {
+.team__social-icon {
   width: 20px;
   height: 20px;
   fill: currentColor;
