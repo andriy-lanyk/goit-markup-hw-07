@@ -33,7 +33,7 @@
         color: $bg-primary-color;
         background-color: $bg-network-color;
       
-        transition: background-color $duration $timing-function;
+        @include transition (background-color);
       }
       
     &__link:hover,

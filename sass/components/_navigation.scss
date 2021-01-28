@@ -13,7 +13,7 @@
         letter-spacing: 0.02em;
         color: $text-title-color;
       
-        transition: color $duration $timing-function;
+        @include transition (color);
       }
       
     &__link--current {
