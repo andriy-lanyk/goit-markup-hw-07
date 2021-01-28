@@ -2,13 +2,11 @@
     display: flex;
 
     &__item:not(:last-child) {
-        margin-right: 50px;
+        margin-right: $margin-header-item;
       }
       
     &__link {
-        display: flex;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        @extend %header-link;
         font-weight: $font-weight-medium;
         font-size: $font-size-primary;
         line-height: $line-height-primary;

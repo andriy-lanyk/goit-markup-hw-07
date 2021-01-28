@@ -2,23 +2,20 @@
     background-color: #f5f4fa;
 
     &__title {
-        margin-top: 0;
+      @extend %title-section;
         margin-bottom: 50px;
-        color: $text-title-color;
-        font-weight: $font-weight-bold;
         font-size: $font-size-title-section;
         line-height: $line-height-title;
         text-align: center;
       }
       
     &__list {
-        display: flex;
-        justify-content: space-between;
+        @extend %list-card;
       }
       
     &__item {
         width: calc((100% - 90px) / 4);
-        margin-right: 30px;
+        margin-right: $margin-section-item;
         padding-bottom: 30px;
       
         background: $bg-primary-color;
@@ -35,7 +32,7 @@
       
     &__photo {
         display: block;
-        margin-bottom: 30px;
+        margin-bottom: $margin-section-item;
       }
       
     &__worker {
@@ -74,11 +71,7 @@
       }
       
     &__social-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
+      @extend %icon-group;
       
         border-radius: 50%;
         color: $fill-primary-color;
